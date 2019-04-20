@@ -6,11 +6,29 @@
 Intro
 ------
 
-A custom recycler view with shimmer views to indicate that views are loading. The recycler view has a built-in adapter to control the shimmer appearance and provide two methods -
+A custom recycler view with shimmer views to indicate that views are loading. The recycler view has a built-in adapter to control the shimmer appearance and provide two methods:
 
-* showShimmerAdapter() - set up a demo adapter a predefined number of child demo views.
-* hideShimmerAdapter() - restores your adapter to show the actual child elements.
+* `showShimmerAdapter()` - set up a demo adapter a predefined number of child demo views.
+* `hideShimmerAdapter()` - restores your adapter to show the actual child elements.
 
+Forked from [sharish/ShimmerRecyclerView](https://github.com/sharish/ShimmerRecyclerView), migrated to **Kotlin** and updated with:
+- AndroidX support
+
+Adding to your project
+------------------------
+
+Add the following configuration in your build.gradle file.
+
+```gradle
+repositories {
+    jcenter()
+    maven { url "https://jitpack.io" }
+}
+
+dependencies {
+    implementation 'com.github.alejandrorosas:ShimmerRecyclerView:2.0.0-alpha1'
+}
+```
     
 Demo Screen
 ------
@@ -78,22 +96,6 @@ where ```@layout/layout_demo_grid``` refers to your sample layout that should be
 ```kotlin
 val shimmerRecycler = findViewById(R.id.shimmer_recycler_view) as ShimmerRecyclerView
 shimmerRecycler.showShimmerAdapter()
-```
-
-Adding to your project
-------------------------
-
-- Add the following configuration in your build.gradle file.
-
-```gradle
-repositories {
-    jcenter()
-    maven { url "https://jitpack.io" }
-}
-
-dependencies {
-    implementation 'com.github.alejandrorosas.ShimmerRecyclerView:shimmer:2.0.0-alpha1'
-}
 ```
 
 Used libraries
