@@ -1,6 +1,5 @@
-[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-ShimmerRecyclerView-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/5058)
-[![Build Status](https://travis-ci.org/sharish/ShimmerRecyclerView.svg?branch=master)](https://travis-ci.org/sharish/ShimmerRecyclerView)
-
+[![Build Status](https://travis-ci.org/alejandrorosas/ShimmerRecyclerView.svg?branch=master)](https://travis-ci.org/alejandrorosas/ShimmerRecyclerView)
+[![](https://jitpack.io/v/alejandrorosas/ShimmerRecyclerView.svg)](https://jitpack.io/#alejandrorosas/ShimmerRecyclerView)
 # ShimmerRecyclerView
 
 
@@ -42,14 +41,14 @@ There are two kinds of shimmer animation which you can see here:
 
 Following are the attributes and methods to initialise the demo views.
 
-| XML Attributes | Java Methods | Explanation |
+| XML Attributes | Methods | Explanation |
 | -------------  | ------------ | ----------- | 
-|```app:shimmer_demo_child_count``` | ```setDemoChildCount(int)``` | Integer value that sets the number of demo views should be present in shimmer adapter. |
-|```app:shimmer_demo_layout``` | ```setDemoLayoutReference(int)``` | Layout reference to your demo view. Define your my_demo_view.xml and refer the layout reference here. |
+|```app:shimmer_demo_child_count``` | ```setDemoChildCount(Int)``` | Integer value that sets the number of demo views should be present in shimmer adapter. |
+|```app:shimmer_demo_layout``` | ```setDemoLayoutReference(Int)``` | Layout reference to your demo view. Define your my_demo_view.xml and refer the layout reference here. |
 |```app:shimmer_demo_layout_manager_type``` | ```setDemoLayoutManager(LayoutManagerType)``` | Layout manager of demo view. Can be one among linear_vertical or linear_horizontal or grid. |
 |```app:shimmer_demo_shimmer_color``` | ``` - ``` | Color reference or value. It can be used to change the color of the shimmer line. |
 |```app:shimmer_demo_angle``` | ``` - ``` | Integer value between 0 and 30 which can modify the angle of the shimmer line. The default value is zero. |
-|```app:shimmer_demo_mask_width``` | ``` setDemoShimmerMaskWidth(float) ``` | Float value between 0 and 1 which can modify the width of the shimmer line. The default value is 0.5. |
+|```app:shimmer_demo_mask_width``` | ``` setDemoShimmerMaskWidth(Float) ``` | Float value between 0 and 1 which can modify the width of the shimmer line. The default value is 0.5. |
 |```app:shimmer_demo_view_holder_item_background``` | ``` - ``` | Color or an xml drawable for the ViewHolder background if you want to achieve the second type of shimmer effect. |
 |```app:shimmer_demo_reverse_animation``` | ``` - ``` | Defines whether the animation should be reversed. If it is true, then the animation starts from the right side of the View. Default value is false. |
 
@@ -76,9 +75,9 @@ Define your xml as:
 ```
 where ```@layout/layout_demo_grid``` refers to your sample layout that should be shown during loading spinner. Now on your activity onCreate, initialize the shimmer as below:
 
-```java
-ShimmerRecyclerView shimmerRecycler = (ShimmerRecyclerView) findViewById(R.id.shimmer_recycler_view);
-shimmerRecycler.showShimmerAdapter();
+```kotlin
+val shimmerRecycler = findViewById(R.id.shimmer_recycler_view) as ShimmerRecyclerView
+shimmerRecycler.showShimmerAdapter()
 ```
 
 Adding to your project
@@ -93,15 +92,9 @@ repositories {
 }
 
 dependencies {
-    implementation 'com.github.sharish:ShimmerRecyclerView:v1.3'
+    implementation 'com.github.alejandrorosas.ShimmerRecyclerView:shimmer:2.0.0-alpha1'
 }
 ```
-
-Developed By
-------------
-
-* Harish Sridharan - <harish.sridhar@gmail.com>
-
 
 Used libraries
 ----------------
@@ -114,7 +107,3 @@ The repo is released under following licenses
 
 <a href="LICENSE.md">Apache License</a> for ShimmerRecycler<br>
 <a href="https://github.com/team-supercharge/ShimmerLayout/blob/master/LICENSE.md">Apache License</a> for ShimmerLayout
-
-
-
-
